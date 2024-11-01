@@ -223,19 +223,32 @@
   },
   "pep723": {
     "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "branchPrefix": "konflux/mintmaker/",
+    "fileMatch": ["pep723"]
   },
   "pip-compile": {
     "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "branchPrefix": "konflux/mintmaker/",
+    "fileMatch": ["pip-compile.txt"],
+        "lockFileMaintenance": {
+            "enabled": true,
+            "branchTopic": "pip-compile-refresh",
+            "commitMessageAction": "Refresh pip-compile outputs"
+        }
   },
   "pip_requirements": {
     "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "branchPrefix": "konflux/mintmaker/",
+    "fileMatch": [
+        "(^|/)[\\w-]*requirements([-.]\\w+)?\\.(txt|pip)$"
+    ]
   },
   "pip_setup": {
     "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "branchPrefix": "konflux/mintmaker/",
+    "fileMatch": [
+        "pip-setup\\.py$"
+    ]
   },
   "pipenv": {
     "additionalBranchPrefix": "{{baseBranch}}/",
@@ -243,7 +256,10 @@
   },
   "poetry": {
     "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "branchPrefix": "konflux/mintmaker/",
+    "fileMatch": [
+        "(^|/)pyproject_poetry\\.toml$"
+    ]
   },
   "pyenv": {
     "additionalBranchPrefix": "{{baseBranch}}/",
@@ -258,32 +274,6 @@
     "branchPrefix": "konflux/mintmaker/"
   },
   "forkProcessing": "enabled",
-  "allowedPostUpgradeCommands": ["^rpm-lockfile-prototype rpms.in.yaml$"],
+//   "allowedPostUpgradeCommands": ["^rpm-lockfile-prototype rpms.in.yaml$"],
   "dependencyDashboard": false,
-  "pep723": {
-        "fileMatch": ["pep723"]
-    },
-    "pip-compile": {
-        "fileMatch": ["pip-compile.txt"],
-        "lockFileMaintenance": {
-            "enabled": true,
-            "branchTopic": "pip-compile-refresh",
-            "commitMessageAction": "Refresh pip-compile outputs"
-        }
-    },
-    "pip_requirements": {
-        "fileMatch": [
-            "(^|/)[\\w-]*requirements([-.]\\w+)?\\.(txt|pip)$"
-        ]
-    },
-    "pip_setup": {
-        "fileMatch": [
-            "pip-setup\\.py$"
-        ]
-    },
-    "poetry": {
-        "fileMatch": [
-            "(^|/)pyproject_poetry\\.toml$"
-        ]
-    }
 }
