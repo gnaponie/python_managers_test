@@ -19,7 +19,6 @@
   "enabledManagers": [
     "tekton",
     "dockerfile",
-    "rpm",
     "custom.regex",
     "argocd",
     "crossplane",
@@ -274,6 +273,5 @@
     "branchPrefix": "konflux/mintmaker/"
   },
   "forkProcessing": "enabled",
-//   "allowedPostUpgradeCommands": ["^rpm-lockfile-prototype rpms.in.yaml$"],
-  "dependencyDashboard": false,
+  "dependencyDashboard": false
 }
