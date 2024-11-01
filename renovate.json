@@ -47,7 +47,6 @@
         "terragrunt-version",
         "tflint-plugin",
         "pep621",
-        "pep723",
         "pip-compile",
         "pip_requirements",
         "pip_setup",
@@ -219,13 +218,6 @@
     "pep621": {
         "additionalBranchPrefix": "{{baseBranch}}/",
         "branchPrefix": "konflux/mintmaker/"
-    },
-    "pep723": {
-        "additionalBranchPrefix": "{{baseBranch}}/",
-        "branchPrefix": "konflux/mintmaker/",
-        "fileMatch": [
-            "pep723"
-        ]
     },
     "pip-compile": {
         "additionalBranchPrefix": "{{baseBranch}}/",
