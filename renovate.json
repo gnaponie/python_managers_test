@@ -58,9 +58,9 @@
         "setup-cfg"
     ],
     "tekton": {
-        "fileMatch": [
-            "\\.yaml$",
-            "\\.yml$"
+        "managerFilePatterns": [
+            "/\\.yaml$/",
+            "/\\.yml$/"
         ],
         "includePaths": [
             ".tekton/**"
@@ -223,8 +223,8 @@
     "pip-compile": {
         "additionalBranchPrefix": "{{baseBranch}}/",
         "branchPrefix": "konflux/mintmaker/",
-        "fileMatch": [
-            "pip-compile.txt"
+        "managerFilePatterns": [
+            "/pip-compile.txt/"
         ],
         "lockFileMaintenance": {
             "enabled": true,
@@ -235,15 +235,15 @@
     "pip_requirements": {
         "additionalBranchPrefix": "{{baseBranch}}/",
         "branchPrefix": "konflux/mintmaker/",
-        "fileMatch": [
-            "(^|/)[\\w-]*requirements([-.]\\w+)?\\.(txt|pip)$"
+        "managerFilePatterns": [
+            "/(^|/)[\\w-]*requirements([-.]\\w+)?\\.(txt|pip)$/"
         ]
     },
     "pip_setup": {
         "additionalBranchPrefix": "{{baseBranch}}/",
         "branchPrefix": "konflux/mintmaker/",
-        "fileMatch": [
-            "pip-setup\\.py$"
+        "managerFilePatterns": [
+            "/pip-setup\\.py$/"
         ]
     },
     "pipenv": {
@@ -253,8 +253,8 @@
     "poetry": {
         "additionalBranchPrefix": "{{baseBranch}}/",
         "branchPrefix": "konflux/mintmaker/",
-        "fileMatch": [
-            "(^|/)pyproject_poetry\\.toml$"
+        "managerFilePatterns": [
+            "/(^|/)pyproject_poetry\\.toml$/"
         ]
     },
     "pyenv": {
@@ -272,8 +272,8 @@
     "pep723": {
         "additionalBranchPrefix": "{{baseBranch}}/",
         "branchPrefix": "konflux/mintmaker/",
-        "fileMatch": [
-            "pep723.py"
+        "managerFilePatterns": [
+            "/pep723.py/"
         ]
     },
     "forkProcessing": "enabled",
